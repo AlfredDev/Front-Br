@@ -1,0 +1,10 @@
+.container {
+    /* @apply w-full min-h-screen flex items-start; */
+    background-color: rgb(237, 241, 245);
+}
+
+.img-bg {
+    @apply h-full w-full object-cover rounded-sm opacity-90 filter backdrop-blur;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+  
