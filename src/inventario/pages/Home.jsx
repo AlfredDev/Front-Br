@@ -18,13 +18,13 @@ export const Home = () => {
 
 
   return (
-    <div>
+    <>
       Home
       <br />
       <button onClick={onLoggout}>
         Salir
       </button>
 
-    </div>
+    </>
   )
 }
