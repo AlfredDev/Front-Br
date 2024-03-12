@@ -2,6 +2,7 @@ import React from 'react'
 import { useContext } from 'react'
 import { AuthContext } from '../../auth/context/AuthContext'
 import { useNavigate } from 'react-router-dom';
+import { Header } from '../components/Header';
 
 export const Home = () => {
 
@@ -18,13 +19,13 @@ export const Home = () => {
 
 
   return (
-    <>
-      Home
-      <br />
+    <div className=''>
+
+
       <button onClick={onLoggout}>
         Salir
       </button>
 
-    </>
+    </div>
   )
 }

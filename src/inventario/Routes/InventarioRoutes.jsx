@@ -8,14 +8,20 @@ import { LeftBar } from '../components/LeftBar'
 
 export const InventarioRoutes = () => {
     return (
-        <div className='flex'>      
-            <LeftBar/>
-            {/* <Header /> */}
-            <Routes>
-                <Route path='home' element={<Home />} />
-                <Route path='login' element={<LoginPage />} />
-                <Route path='/*' element={<Navigate to="/home" />} />
-            </Routes>
-        </div>
+        <>
+            <div className='flex'>
+                <div className="flex-one">
+                    <LeftBar />
+                </div>
+                <div className="flex-1">
+                    <Header />
+                    <Routes>
+                        <Route path='home' element={<Home />} />
+                        <Route path='login' element={<LoginPage />} />
+                        <Route path='/*' element={<Navigate to="/home" />} />
+                    </Routes>
+                </div>
+            </div>
+        </>
     )
 }
