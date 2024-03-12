@@ -16,7 +16,7 @@ export const LoginForm = () => {
 
     const onLogin = () => {
 
-        login('Alfred');
+        login(usuario, password);
 
         navigate('/', {
             replace: true,

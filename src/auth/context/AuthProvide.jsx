@@ -2,6 +2,7 @@ import React, { useReducer } from 'react'
 import { AuthContext } from './AuthContext'
 import { authReducer } from './authReducer'
 import { types } from '../types/types'
+import axios from 'axios'
 
 
 
@@ -22,6 +23,24 @@ export const AuthProvide = ({ children }) => {
 
     const [authState, dispatch] = useReducer(authReducer, {}, init);
 
+    // const login = async (username, password) => {
+
+    //     try {
+    //         const response = await axios.post('http://localhost:8080/auth/login', { username, password });
+    //         const user = response.data;
+
+    //         const action = {
+    //             type: types.login,
+    //             payload: user
+
+    //         }
+    //         localStorage.setItem('user', JSON.stringify(user));
+    //         dispatch(action)
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
+
     const login = (name = '') => {
 
         const user = { id: 'ABC', name }
@@ -34,6 +53,7 @@ export const AuthProvide = ({ children }) => {
         localStorage.setItem('user', JSON.stringify(user));
         dispatch(action)
     }
+
 
     const logout = () => {
         localStorage.removeItem('user');
