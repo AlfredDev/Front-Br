@@ -4,7 +4,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 
 export const UserCard = ({ user, correo, sideBar }) => {
     return (
-        Card
+    
         <div className='card bg-[#1D242E] w-full flex p-5'>
             <FaRegUserCircle className='logo'/>
             {sideBar &&  <div className="data">
