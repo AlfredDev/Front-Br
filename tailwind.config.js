@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "orange-brisa": "#DF8304",
+        "orange-brisa": "#df8304",
         "bg-nav": "#283342",
+        "body-bg": "#edf1f5#",
       }
     },
   },

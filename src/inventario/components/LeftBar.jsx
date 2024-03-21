@@ -16,7 +16,6 @@ import { BsPhone, BsCreditCard2Front } from "react-icons/bs";
 import { SlScreenDesktop } from "react-icons/sl";
 import { RiSettings5Line } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
-import { FaRegUserCircle } from "react-icons/fa";
 const linksArray = [
   {
     label: "Inicio",
@@ -31,7 +30,7 @@ const linksArray = [
   {
     label: "Computadoras",
     icon: <PiLaptopBold />,
-    to: "/",
+    to: "/computadoras",
   },
   {
     label: "Ipads",
@@ -212,6 +211,9 @@ const Container = styled.div`
       &.active {
         color: white;
         background: #df8304;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
       }
     }
   }

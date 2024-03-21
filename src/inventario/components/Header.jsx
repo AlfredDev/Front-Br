@@ -1,10 +1,12 @@
 
-export const Header = () => {
+export const Header = ({ruta}) => {
+
+
     return (
         <header className="bg-white flex  items-center justify-end p-1 w-full h-auto shadow-[0_1px_6px_rgba(255,_102,_0,_0.7)]" >
             <div className="title w-full  flex justify-center">
             <h1 className='text-2xl text-[#060606] font-bold '>
-                Inicio
+                {ruta}
             </h1>
             </div>
             <div className="logo">
