@@ -88,7 +88,7 @@ const listBottom = [
   {
     label: "Configuración",
     icon: <RiSettings5Line />,
-    to: "/",
+    to: "/configuracion",
   },
   {
     label: "Cerrar Sesión",

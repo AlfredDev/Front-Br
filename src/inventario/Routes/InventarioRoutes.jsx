@@ -9,6 +9,9 @@ import { useState } from 'react'
 import Celulares from '../pages/Celulares'
 import { Computadoras } from '../pages/Computadoras'
 import { AddCompu } from '../pages/AddCompu'
+import Configuracion from '../pages/Configuracion'
+import Usuarios from '../pages/Usuarios'
+import AgregarUsuario from '../pages/AgregarUsuario'
 
 export const InventarioRoutes = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -32,6 +35,9 @@ export const InventarioRoutes = () => {
             <Route path='/celulares' element={<Celulares />} />
             <Route path='/Computadoras' element={<Computadoras />} />
             <Route path='/computadora' element={<AddCompu />} />
+            <Route path='/configuracion' element={<Configuracion/>} />
+            <Route path='/configuracion/usuarios' element={<Usuarios/>} />
+            <Route path='/configuracion/usuarios/agregarUsuario' element={<AgregarUsuario/>} />
           </Routes>
         </div>
       </Container>
