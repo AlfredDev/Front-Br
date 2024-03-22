@@ -35,17 +35,17 @@ function Configuracion() {
         {
             label: "Antivirus",
             icon: <AiFillSafetyCertificate />,
-            to: "/configuracion/usuarios",
+            to: "/configuracion/antivirus",
         },
         {
             label: "Office",
             icon: <SiMicrosoftoffice />,
-            to: "/configuracion/usuarios",
+            to: "/configuracion/office",
         },
         {
             label: "Marcas",
             icon: <IoBookmarks />,
-            to: "/configuracion/usuarios",
+            to: "/configuracion/marcas",
         },
     ];
     return (

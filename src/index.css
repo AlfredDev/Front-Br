@@ -54,6 +54,10 @@ select{
   background-color: #BA6D03;
 }
 
+hr{
+  background-color: black;
+}
+
 .btn-cerrar{
   background-color: transparent;
   border-radius: 3px;

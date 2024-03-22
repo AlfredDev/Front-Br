@@ -38,10 +38,6 @@ const headers = [
 
 const initialRows = generateRandomData();
 
-
-
-
-
 export const Computadoras = () => {
 
     let navigate = useNavigate();

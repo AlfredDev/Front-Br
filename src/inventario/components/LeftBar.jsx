@@ -75,7 +75,7 @@ const linksArray = [
   {
     label: "Correos",
     icon: <MdOutlineContactMail />,
-    to: "/",
+    to: "/correos",
   },
   {
     label: "Llaves",
