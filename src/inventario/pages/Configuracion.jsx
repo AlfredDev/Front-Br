@@ -20,12 +20,12 @@ function Configuracion() {
         {
             label: "Empleados",
             icon: <MdOutlineContactMail />,
-            to: "/configuracion/usuarios",
+            to: "/configuracion/empleados",
         },
         {
             label: "Departamentos",
             icon: <HiOutlineBuildingOffice2 />,
-            to: "/configuracion/usuarios",
+            to: "/configuracion/departamentos",
         },
         {
             label: "Sistemas Operativos",

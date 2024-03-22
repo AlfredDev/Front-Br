@@ -15,7 +15,6 @@ function ButtonAdd({ label, ruta }) {
 
 const Button=styled.div`
     background:#DF8304;
-    padding:10px 5px;
     color:white;
     border-radius:3px;
 
@@ -26,6 +25,7 @@ const Button=styled.div`
     .link{
         display:flex;
         align-items:center;
+        padding:10px 5px;
     }
 `;
 

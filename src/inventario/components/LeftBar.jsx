@@ -116,7 +116,7 @@ function LeftBar({ sidebarOpen, setSidebarOpen }) {
         </button>
           <div className="contenedorItems">
             {linksArray.map(({ icon, label, to }) => (
-              <div className="linkContainer" key={label}>
+              <div className="linkContainer" key={label} title={label}>
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
@@ -130,7 +130,7 @@ function LeftBar({ sidebarOpen, setSidebarOpen }) {
             ))}
             <Divider />
             {listBottom.map(({ icon, label, to }) => (
-              <div className="linkContainer" key={label}>
+              <div className="linkContainer" key={label} title={label}>
                 <NavLink
                   to={to}
                   className={({ isActive }) =>
@@ -177,17 +177,6 @@ const Container = styled.div`
   .contenedorItems {
     max-height: calc(100% - 90px); 
     overflow: auto;
-    :-webkit-scrollbar {
-      width: 30px; 
-    }
-    :-webkit-scrollbar-thumb {
-      background-color: white;
-      border-radius: 5px;
-    }
-
-    :-webkit-scrollbar-track {
-      background-color: #f0f0f0;
-    }
   }
 
   .linkContainer {
