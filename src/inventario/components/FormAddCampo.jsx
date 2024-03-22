@@ -1,4 +1,4 @@
-function FormAddSO({ header, funcion }) {
+function FormAddCampo({ header, funcion }) {
     return (
         <div>
             <h1 className="text-2xl font-semibold mb-2 w-full text-center">{header}</h1>
@@ -22,4 +22,4 @@ function FormAddSO({ header, funcion }) {
     )
 }
 
-export default FormAddSO;
+export default FormAddCampo;

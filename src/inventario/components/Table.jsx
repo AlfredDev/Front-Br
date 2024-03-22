@@ -15,9 +15,9 @@ export default function TableComponent({ headers, rows, onEdit = {} }) {
           <TableHead>
             <TableRow>
               {headers.map((header, index) => (
-                <TableCell key={index}>{header}</TableCell>
+                <TableCell key={index}><p className='font-semibold'>{header}</p></TableCell>
               ))}
-              <TableCell>Ver</TableCell>
+              <TableCell><p className='font-semibold'>Ver</p></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

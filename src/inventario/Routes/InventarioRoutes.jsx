@@ -16,6 +16,10 @@ import Empleados from '../pages/Empleados'
 import AddEmpleado from '../pages/AddEmpleado'
 import Departamentos from '../pages/Departamentos'
 import SistemasOperativos from '../pages/SistemasOperativos'
+import Office from '../pages/Office'
+import Marcas from '../pages/Marcas'
+import Antivirus from '../pages/Antivirus'
+import Correos from '../pages/Correos'
 
 export const InventarioRoutes = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -39,6 +43,7 @@ export const InventarioRoutes = () => {
             <Route path='/celulares' element={<Celulares />} />
             <Route path='/Computadoras' element={<Computadoras />} />
             <Route path='/computadora' element={<AddCompu />} />
+            <Route path='/correos' element={<Correos/>} />
             <Route path='/configuracion' element={<Configuracion/>} />
             <Route path='/configuracion/usuarios' element={<Usuarios/>} />
             <Route path='/configuracion/usuarios/agregarUsuario' element={<AgregarUsuario/>} />
@@ -46,6 +51,9 @@ export const InventarioRoutes = () => {
             <Route path='/configuracion/empleados/agregarEmpleado' element={<AddEmpleado/>}></Route>
             <Route path='/configuracion/departamentos' element={<Departamentos/>} />
             <Route path='/configuracion/sistemasOperativos' element={<SistemasOperativos/>} />
+            <Route path='/configuracion/antivirus' element={<Antivirus/>} />
+            <Route path='/configuracion/office' element={<Office/>} />
+            <Route path='/configuracion/marcas' element={<Marcas/>} />
           </Routes>
         </div>
       </Container>
