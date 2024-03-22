@@ -9,6 +9,13 @@ import { useState } from 'react'
 import Celulares from '../pages/Celulares'
 import { Computadoras } from '../pages/Computadoras'
 import { AddCompu } from '../pages/AddCompu'
+import Configuracion from '../pages/Configuracion'
+import Usuarios from '../pages/Usuarios'
+import AgregarUsuario from '../pages/AgregarUsuario'
+import Empleados from '../pages/Empleados'
+import AddEmpleado from '../pages/AddEmpleado'
+import Departamentos from '../pages/Departamentos'
+import SistemasOperativos from '../pages/SistemasOperativos'
 
 export const InventarioRoutes = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -32,6 +39,13 @@ export const InventarioRoutes = () => {
             <Route path='/celulares' element={<Celulares />} />
             <Route path='/Computadoras' element={<Computadoras />} />
             <Route path='/computadora' element={<AddCompu />} />
+            <Route path='/configuracion' element={<Configuracion/>} />
+            <Route path='/configuracion/usuarios' element={<Usuarios/>} />
+            <Route path='/configuracion/usuarios/agregarUsuario' element={<AgregarUsuario/>} />
+            <Route path='/configuracion/empleados' element={<Empleados/>}/>
+            <Route path='/configuracion/empleados/agregarEmpleado' element={<AddEmpleado/>}></Route>
+            <Route path='/configuracion/departamentos' element={<Departamentos/>} />
+            <Route path='/configuracion/sistemasOperativos' element={<SistemasOperativos/>} />
           </Routes>
         </div>
       </Container>
@@ -42,7 +56,7 @@ export const InventarioRoutes = () => {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 90px auto;
+  grid-template-columns: 70px auto;
   transition:all 0.3s ;
   &.active {
     grid-template-columns: 250px auto;

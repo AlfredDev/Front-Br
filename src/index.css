@@ -25,3 +25,57 @@ html {
   border-radius: 20px;
   border: 3px solid orange;
 }
+
+input{
+  border:1px solid #E3EBF3;
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0px 10px;
+}
+
+select{
+  border:1px solid #E3EBF3;
+  border-radius: 5px;
+  height: 2.5rem;
+  padding: 0px 10px;
+
+  
+}
+
+
+.btn-agregar{
+  background-color: #DF8304;
+  color:white;
+  padding: 8px 15px;
+  border-radius: 3px;
+}
+
+.btn-agregar:hover{
+  background-color: #BA6D03;
+}
+
+.btn-cerrar{
+  background-color: transparent;
+  border-radius: 3px;
+  border:1px solid #DF8304;
+  color:black;
+  padding: 6px 15px;
+
+}
+
+.btn-cerrar:hover{
+  background-color: #EDF1F5;
+}
+.logoUser{
+    font-size: 30px;
+    color:#DF8304;
+}
+
+.fondo-form{
+  background:#EDF1F5;
+}
+
+.contenedor-form{
+  background: white;
+
+}
