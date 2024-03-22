@@ -1,7 +1,7 @@
-function AddDepartamento() {
+function FormAddSO({ header, funcion }) {
     return (
         <div>
-            <h1 className="text-2xl font-semibold mb-2 w-full text-center">Agregar Departamento</h1>
+            <h1 className="text-2xl font-semibold mb-2 w-full text-center">{header}</h1>
             <hr />
             <form className="mt-3">
                 <div className=" mb-3">
@@ -9,7 +9,7 @@ function AddDepartamento() {
                         <label>Nombre:</label>
                     </div>
                     <div className="w-full mt-1">
-                        <input type="text" required className="w-full"/>
+                        <input type="text" required className="w-full" />
                     </div>
                 </div>
                 <hr />
@@ -19,7 +19,7 @@ function AddDepartamento() {
             </form>
 
         </div>
-    );
+    )
 }
 
-export default AddDepartamento;
+export default FormAddSO;

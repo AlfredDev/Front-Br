@@ -1,7 +1,7 @@
 
 import Modal from "../components/Modal";
 import React from "react";
-import AddDepartamento from "./AddDepartamento";
+import FormAddCampo from "../components/FormAddCampo";
 
 
 function Departamentos() {
@@ -12,7 +12,8 @@ function Departamentos() {
             Departamentos
             <button onClick={() => setShowModal(true)} className="btn-agregar">Agregar Departamento</button>
             {
-                showModal ? (<Modal header={"Agregar Departamento"} body={<AddDepartamento />} funcion={setShowModal} setShowModal={setShowModal} />) : null
+                showModal ? <Modal body={<FormAddCampo header={"Agregar Departamento"} />} setShowModal={setShowModal}/> : null
+
             }
         </div>
     );

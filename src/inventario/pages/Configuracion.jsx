@@ -30,7 +30,7 @@ function Configuracion() {
         {
             label: "Sistemas Operativos",
             icon: <FaWindows />,
-            to: "/configuracion/usuarios",
+            to: "/configuracion/sistemasoperativos",
         },
         {
             label: "Antivirus",

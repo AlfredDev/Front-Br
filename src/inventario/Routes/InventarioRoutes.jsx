@@ -15,6 +15,7 @@ import AgregarUsuario from '../pages/AgregarUsuario'
 import Empleados from '../pages/Empleados'
 import AddEmpleado from '../pages/AddEmpleado'
 import Departamentos from '../pages/Departamentos'
+import SistemasOperativos from '../pages/SistemasOperativos'
 
 export const InventarioRoutes = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -44,6 +45,7 @@ export const InventarioRoutes = () => {
             <Route path='/configuracion/empleados' element={<Empleados/>}/>
             <Route path='/configuracion/empleados/agregarEmpleado' element={<AddEmpleado/>}></Route>
             <Route path='/configuracion/departamentos' element={<Departamentos/>} />
+            <Route path='/configuracion/sistemasOperativos' element={<SistemasOperativos/>} />
           </Routes>
         </div>
       </Container>
