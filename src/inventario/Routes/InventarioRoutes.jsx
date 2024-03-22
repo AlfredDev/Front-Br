@@ -46,9 +46,7 @@ export const InventarioRoutes = () => {
             <Route path='/correos' element={<Correos/>} />
             <Route path='/configuracion' element={<Configuracion/>} />
             <Route path='/configuracion/usuarios' element={<Usuarios/>} />
-            <Route path='/configuracion/usuarios/agregarUsuario' element={<AgregarUsuario/>} />
             <Route path='/configuracion/empleados' element={<Empleados/>}/>
-            <Route path='/configuracion/empleados/agregarEmpleado' element={<AddEmpleado/>}></Route>
             <Route path='/configuracion/departamentos' element={<Departamentos/>} />
             <Route path='/configuracion/sistemasOperativos' element={<SistemasOperativos/>} />
             <Route path='/configuracion/antivirus' element={<Antivirus/>} />
