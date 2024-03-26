@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Search } from '../components/Search'
 import TableComponent from '../components/Table';
 import { Button, Stack } from '@mui/material';
@@ -6,6 +6,8 @@ import AddIcon from '@mui/icons-material/Add';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import ArticleIcon from '@mui/icons-material/Article';
 import { useNavigate } from 'react-router-dom';
+import { ModalXl } from '../components/ModalXl';
+import { ComputadoraForm } from '../forms/ComputadoraForm';
 
 const generateRandomData = () => {
     const desserts = ['Frozen yoghurt', 'Ice cream sandwich', 'Eclair', 'Cupcake', 'Gingerbread'];
@@ -46,6 +48,7 @@ export const Computadoras = () => {
         navigate('/computadora')
     }
 
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <div className='flex flex-col h-screen p-7' >
@@ -59,7 +62,7 @@ export const Computadoras = () => {
                 <span>100 reg</span>
             </div>
 
-            <div className="h-1/6 flex flex-row justify-between content-center pt-8" >
+            <div className="h-1/6 flex flex-row justify-between content-center pt-6" >
                 <div className="buttons1">
                     <Stack direction={'row'} spacing={2}>
                         <Button variant="outlined" endIcon={<PictureAsPdfIcon />} style={{ borderColor: 'orange', color: 'black' }} color='primary'>
@@ -72,7 +75,7 @@ export const Computadoras = () => {
                 </div>
                 <div className="buttons2">
                     <button className='bg-orange-brisa w-[300px] h-10 text-white rounded-md hover:bg-orange-400 transition-colors duration-300'
-                        onClick={onAddHandler}
+                        onClick={() => setShowModal(true)}
                     >
                         <AddIcon />
                         Agregar Computadora
@@ -80,6 +83,7 @@ export const Computadoras = () => {
                 </div>
             </div>
 
+            {showModal ? <ModalXl setShowmodal={setShowModal} body={<ComputadoraForm />} title={"Agregar Computadora"} /> : null}
         </div>
     )
 }

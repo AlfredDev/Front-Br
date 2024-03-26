@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { UserCard } from "./UserCard";
 import {
   PiScreencastBold,
@@ -9,13 +9,14 @@ import {
   PiPhoneCallBold,
   PiDeviceTabletBold,
 } from "react-icons/pi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { MdOutlineContactMail } from "react-icons/md";
 import { BsPhone, BsCreditCard2Front } from "react-icons/bs";
 import { SlScreenDesktop } from "react-icons/sl";
 import { RiSettings5Line } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
+import { AuthContext } from "../../auth/context/AuthContext";
 const linksArray = [
   {
     label: "Inicio",
@@ -102,6 +103,15 @@ function LeftBar({ sidebarOpen, setSidebarOpen }) {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const navigator = useNavigate();
+  const {logout} = useContext(AuthContext);
+  const onLoggout = () => {
+    logout();
+    navigator('/login', {
+      replace: true,
+    })
+  }
+
   return (
     <Container isOpen={sidebarOpen} className="">
       <div className="sidebar bg-bg-nav h-screen relative">
@@ -136,6 +146,7 @@ function LeftBar({ sidebarOpen, setSidebarOpen }) {
                   className={({ isActive }) =>
                     `links${isActive ? ` active` : ``}`
                   }
+                  onClick={label === 'Cerrar Sesión'? onLoggout : null}
                 >
                   <div className="linkicon p-2">{icon}</div>
                   {sidebarOpen && <span className="text-white">{label}</span>}

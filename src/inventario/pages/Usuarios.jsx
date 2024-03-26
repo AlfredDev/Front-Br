@@ -34,7 +34,7 @@ function Usuarios(){
                 <span>{initialRows.length} registros</span>
             </div>
 
-            <div className="h-1/6 flex flex-row justify-between content-center pt-8" >
+            <div className="h-1/6 flex flex-row justify-between content-center pt-5" >
                 <div className="buttons2 w-full">
                     <button className='btn-agregar float-end'
                         onClick={()=>setShowModal(true)}

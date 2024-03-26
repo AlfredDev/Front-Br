@@ -8,7 +8,7 @@ function Departamentos() {
     const [showModal, setShowModal] = React.useState(false);
 
     return (
-        <div>
+        <div className="p-10">
             Departamentos
             <button onClick={() => setShowModal(true)} className="btn-agregar">Agregar Departamento</button>
             {

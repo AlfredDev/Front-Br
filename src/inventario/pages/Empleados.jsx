@@ -1,12 +1,12 @@
 import Button from "../components/ButtonAdd";
-import React from 'react';
+import React, { useState } from 'react';
 import Modal from "../components/Modal";
 import FormAddEmpleado from "../components/FormAddEmpleado";
 import { Search } from "../components/Search";
 import TableComponent from "../components/Table";
 import AddIcon from '@mui/icons-material/Add';
 function Empleados(){
-    const [showModal,setShowModal]=React.useState(false);
+    const [showModal,setShowModal]= useState(false);
     const headers=[ 
         'Nombre',
         'Departamento'
@@ -28,7 +28,7 @@ function Empleados(){
                 <span>{initialRows.length} registros</span>
             </div>
 
-            <div className="h-1/6 flex flex-row justify-between content-center pt-8" >
+            <div className="h-1/6 flex flex-row justify-between content-center pt-5" >
                 <div className="buttons2 w-full">
                     <button className='btn-agregar float-end'
                         onClick={()=>setShowModal(true)}
