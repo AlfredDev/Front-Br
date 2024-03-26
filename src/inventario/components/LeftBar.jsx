@@ -24,19 +24,20 @@ const linksArray = [
     to: "/",
   },
   {
-    label: "Celulares",
-    icon: <BsPhone />,
-    to: "/celulares",
-  },
-  {
     label: "Computadoras",
     icon: <PiLaptopBold />,
     to: "/computadoras",
   },
   {
+    label: "Celulares",
+    icon: <BsPhone />,
+    to: "/celulares",
+  },
+
+  {
     label: "Ipads",
     icon: <PiDeviceTabletBold />,
-    to: "/",
+    to: "/ipads",
   },
   {
     label: "Impresoras",
@@ -104,7 +105,7 @@ function LeftBar({ sidebarOpen, setSidebarOpen }) {
   };
 
   const navigator = useNavigate();
-  const {logout} = useContext(AuthContext);
+  const { logout } = useContext(AuthContext);
   const onLoggout = () => {
     logout();
     navigator('/login', {
@@ -124,38 +125,38 @@ function LeftBar({ sidebarOpen, setSidebarOpen }) {
         <button className="Sidebarbutton bg-bg-nav" onClick={ModSidebaropen}>
           <PiCaretLeftBold />
         </button>
-          <div className="contenedorItems">
-            {linksArray.map(({ icon, label, to }) => (
-              <div className="linkContainer" key={label} title={label}>
-                <NavLink
-                  to={to}
-                  className={({ isActive }) =>
-                    `links${isActive ? ` active` : ``}`
-                  }
-                >
-                  <div className="linkicon p-2">{icon}</div>
-                  {sidebarOpen && <span className="text-white">{label}</span>}
-                </NavLink>
-              </div>
-            ))}
-            <Divider />
-            {listBottom.map(({ icon, label, to }) => (
-              <div className="linkContainer" key={label} title={label}>
-                <NavLink
-                  to={to}
-                  className={({ isActive }) =>
-                    `links${isActive ? ` active` : ``}`
-                  }
-                  onClick={label === 'Cerrar Sesión'? onLoggout : null}
-                >
-                  <div className="linkicon p-2">{icon}</div>
-                  {sidebarOpen && <span className="text-white">{label}</span>}
-                </NavLink>
-              </div>
-            ))}
-          </div>
+        <div className="contenedorItems">
+          {linksArray.map(({ icon, label, to }) => (
+            <div className="linkContainer" key={label} title={label}>
+              <NavLink
+                to={to}
+                className={({ isActive }) =>
+                  `links${isActive ? ` active` : ``}`
+                }
+              >
+                <div className="linkicon p-2">{icon}</div>
+                {sidebarOpen && <span className="text-white">{label}</span>}
+              </NavLink>
+            </div>
+          ))}
+          <Divider />
+          {listBottom.map(({ icon, label, to }) => (
+            <div className="linkContainer" key={label} title={label}>
+              <NavLink
+                to={to}
+                className={({ isActive }) =>
+                  `links${isActive ? ` active` : ``}`
+                }
+                onClick={label === 'Cerrar Sesión' ? onLoggout : null}
+              >
+                <div className="linkicon p-2">{icon}</div>
+                {sidebarOpen && <span className="text-white">{label}</span>}
+              </NavLink>
+            </div>
+          ))}
         </div>
-      
+      </div>
+
     </Container>
   );
 }

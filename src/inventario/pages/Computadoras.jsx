@@ -62,7 +62,7 @@ export const Computadoras = () => {
                 <span>100 reg</span>
             </div>
 
-            <div className="h-1/6 flex flex-row justify-between content-center pt-6" >
+            <div className="h-1/6 flex flex-row justify-between content-center pt-4" >
                 <div className="buttons1">
                     <Stack direction={'row'} spacing={2}>
                         <Button variant="outlined" endIcon={<PictureAsPdfIcon />} style={{ borderColor: 'orange', color: 'black' }} color='primary'>

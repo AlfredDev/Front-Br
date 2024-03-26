@@ -1,4 +1,3 @@
-import Button from "../components/ButtonAdd";
 import React, { useState } from 'react';
 import Modal from "../components/Modal";
 import FormAddEmpleado from "../components/FormAddEmpleado";

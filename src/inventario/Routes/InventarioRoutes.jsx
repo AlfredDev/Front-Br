@@ -20,6 +20,7 @@ import Office from '../pages/Office'
 import Marcas from '../pages/Marcas'
 import Antivirus from '../pages/Antivirus'
 import Correos from '../pages/Correos'
+import { Ipads } from '../pages/Ipads'
 
 export const InventarioRoutes = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -52,6 +53,8 @@ export const InventarioRoutes = () => {
             <Route path='/configuracion/antivirus' element={<Antivirus/>} />
             <Route path='/configuracion/office' element={<Office/>} />
             <Route path='/configuracion/marcas' element={<Marcas/>} />
+            <Route path='/ipads' element={<Ipads/>}/>
+
           </Routes>
         </div>
       </Container>
