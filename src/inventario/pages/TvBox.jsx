@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Search } from '../components/Search';
 import TableComponent from '../components/Table';
 import { BotonesBottom } from '../components/BotonesBottom';
+import Modal from '../components/Modal';
+import { TvBoxForm } from '../forms/TvBoxForm';
 
 const generateRandomData = () => {
     const desserts = ['Frozen yoghurt', 'Ice cream sandwich', 'Eclair', 'Cupcake', 'Gingerbread'];
@@ -36,6 +38,12 @@ const initialRows = generateRandomData();
 
 
 export const TvBox = () => {
+
+    const [showModal, setShowModal] = useState(false);
+    const onOpenhandled = () => {
+        setShowModal(true);
+    }
+
     return (
         <div className='flex flex-col h-screen p-7' >
             <div className="flex  pb-4 pt-3 justify-end ">
@@ -48,7 +56,12 @@ export const TvBox = () => {
                 <span>{initialRows.length}</span>
             </div>
 
-            <BotonesBottom label={'Agregar Telefono'} />
+            <BotonesBottom label={'Agregar Telefono'} addHandle={onOpenhandled} />
+            {
+                showModal
+                    ? <Modal setShowModal={setShowModal} body={<TvBoxForm/>}/>
+                    : null
+            }
         </div>
     )
 }
