@@ -8,7 +8,7 @@ export const UserCard = ({ user, correo, sideBar }) => {
             <FaRegUserCircle className='logoUser'/>
             {sideBar &&  <div className="data pl-3">
                 <h2>{user}</h2>
-                <h3>{correo}</h3>
+                <h3 className='font-light'>{correo}</h3>
             </div>}
         </div>
     )

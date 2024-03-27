@@ -40,7 +40,7 @@ export const Ipads = () => {
     return (
         <div className='flex flex-col h-screen p-7' >
             <div className="flex  pb-4 pt-3 justify-end ">
-                <Search holder={"PC"} />
+                <Search holder={"Ipad"} />
             </div>
             <div className="bg-red-300 h-2/3 ">
                 <TableComponent headers={headers} rows={initialRows} />

@@ -21,6 +21,14 @@ import Marcas from '../pages/Marcas'
 import Antivirus from '../pages/Antivirus'
 import Correos from '../pages/Correos'
 import { Ipads } from '../pages/Ipads'
+import { Impresoras } from '../pages/Impresoras'
+import { MicroImpresoras } from '../pages/MicroImpresoras'
+import { Pantallas } from '../pages/Pantallas'
+import { Radios } from '../pages/Radios'
+import { Telefonos } from '../pages/Telefonos'
+import { TvBox } from '../pages/TvBox'
+import { TvHuesped } from '../pages/TvHuesped'
+import { Llaves } from '../pages/Llaves'
 
 export const InventarioRoutes = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -44,17 +52,24 @@ export const InventarioRoutes = () => {
             <Route path='/celulares' element={<Celulares />} />
             <Route path='/Computadoras' element={<Computadoras />} />
             <Route path='/computadora' element={<AddCompu />} />
-            <Route path='/correos' element={<Correos/>} />
-            <Route path='/configuracion' element={<Configuracion/>} />
-            <Route path='/configuracion/usuarios' element={<Usuarios/>} />
-            <Route path='/configuracion/empleados' element={<Empleados/>}/>
-            <Route path='/configuracion/departamentos' element={<Departamentos/>} />
-            <Route path='/configuracion/sistemasOperativos' element={<SistemasOperativos/>} />
-            <Route path='/configuracion/antivirus' element={<Antivirus/>} />
-            <Route path='/configuracion/office' element={<Office/>} />
-            <Route path='/configuracion/marcas' element={<Marcas/>} />
-            <Route path='/ipads' element={<Ipads/>}/>
-
+            <Route path='/correos' element={<Correos />} />
+            <Route path='/configuracion' element={<Configuracion />} />
+            <Route path='/configuracion/usuarios' element={<Usuarios />} />
+            <Route path='/configuracion/empleados' element={<Empleados />} />
+            <Route path='/configuracion/departamentos' element={<Departamentos />} />
+            <Route path='/configuracion/sistemasOperativos' element={<SistemasOperativos />} />
+            <Route path='/configuracion/antivirus' element={<Antivirus />} />
+            <Route path='/configuracion/office' element={<Office />} />
+            <Route path='/configuracion/marcas' element={<Marcas />} />
+            <Route path='/ipads' element={<Ipads />} />
+            <Route path='/impresoras' element={<Impresoras />} />
+            <Route path='/micro-impresoras' element={<MicroImpresoras />} />
+            <Route path='/Pantallas' element={<Pantallas />} />
+            <Route path='/Radios' element={<Radios />} />
+            <Route path='/telefonos' element={<Telefonos />} />
+            <Route path='/TvBox' element={<TvBox />} />
+            <Route path='/TvHuesped' element={<TvHuesped />} />
+            <Route path='/llaves' element={<Llaves />} />
           </Routes>
         </div>
       </Container>

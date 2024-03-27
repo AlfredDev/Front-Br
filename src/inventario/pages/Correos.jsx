@@ -37,7 +37,7 @@ function Correos() {
     return (
         <div className='flex flex-col h-screen p-7' >
             <div className="flex  pb-4 pt-3 justify-end ">
-                <Search holder={"PC"} />
+                <Search holder={"Correo"} />
             </div>
             <div className="bg-red-300 h-2/3 ">
                 <TableComponent headers={headers} rows={initialRows} />
@@ -46,7 +46,7 @@ function Correos() {
                 <span>{initialRows.length} registros</span>
             </div>
 
-            <div className="h-1/6 flex flex-row justify-between content-center pt-5" >
+            <div className="h-1/6 flex flex-row justify-between content-center pt-4" >
                 <div className="buttons2 w-full ">
                     <button className='btn-agregar w-[300px] h-10 text-white rounded-md  transition-colors duration-300 float-end'
                         onClick={() => setShowModal(true)}>

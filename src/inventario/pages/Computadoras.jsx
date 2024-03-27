@@ -35,17 +35,26 @@ const headers = [
     'Protein (g)',
 ];
 
+
+const onAddHandler = () => {
+
+}
+
+
 const initialRows = generateRandomData();
 
 export const Computadoras = () => {
 
     let navigate = useNavigate();
 
-    const onAddHandler = () => {
-        navigate('/computadora')
-    }
+
 
     const [showModal, setShowModal] = useState(false);
+
+    const onAddHandler = () => {
+        setShowModal(true);
+    }
+
 
     return (
         <div className='flex flex-col h-screen p-7' >
@@ -59,7 +68,7 @@ export const Computadoras = () => {
                 <span>100 reg</span>
             </div>
 
-            <BotonesBottom label={'Agregar Computadora'} />
+            <BotonesBottom label={'Agregar Computadora'}  addHandle = {onAddHandler}/>
 
             {showModal ? <ModalXl setShowmodal={setShowModal} body={<ComputadoraForm />} title={"Agregar Computadora"} /> : null}
         </div>

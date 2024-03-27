@@ -17,6 +17,9 @@ import { SlScreenDesktop } from "react-icons/sl";
 import { RiSettings5Line } from "react-icons/ri";
 import { CgLogOut } from "react-icons/cg";
 import { AuthContext } from "../../auth/context/AuthContext";
+import SpeakerPhoneIcon from '@mui/icons-material/SpeakerPhone';
+
+
 const linksArray = [
   {
     label: "Inicio",
@@ -42,37 +45,37 @@ const linksArray = [
   {
     label: "Impresoras",
     icon: <PiPrinterBold />,
-    to: "/",
+    to: "/impresoras",
   },
   {
     label: "MicroImpresoras",
     icon: <PiPrinterBold />,
-    to: "/",
+    to: "/micro-impresoras",
   },
   {
     label: "Pantallas",
     icon: <SlScreenDesktop />,
-    to: "/",
+    to: "/Pantallas",
   },
   {
     label: "Radios",
-    icon: <PiHouseBold />,
-    to: "/",
+    icon: <SpeakerPhoneIcon />,
+    to: "/Radios",
   },
   {
     label: "Teléfonos",
     icon: <PiPhoneCallBold />,
-    to: "/",
+    to: "/telefonos",
   },
   {
     label: "TvBox",
     icon: <PiScreencastBold />,
-    to: "/",
+    to: "/TvBox",
   },
   {
     label: "TvHuésped",
     icon: <SlScreenDesktop />,
-    to: "/",
+    to: "/TvHuesped",
   },
   {
     label: "Correos",
@@ -82,7 +85,7 @@ const linksArray = [
   {
     label: "Llaves",
     icon: <BsCreditCard2Front />,
-    to: "/",
+    to: "/llaves",
   },
 ];
 

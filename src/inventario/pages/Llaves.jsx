@@ -1,14 +1,7 @@
-import { Button, Stack } from "@mui/material";
-import { Search } from "../components/Search";
-import TableComponent from "../components/Table";
-
-import { BotonesBottom } from "../components/BotonesBottom";
-import { useState } from "react";
-import { ModalXl } from "../components/ModalXl";
-import { CelularForm } from "../forms/CelularForm";
-import Modal from "../components/Modal";
-
-
+import React from 'react'
+import { Search } from '../components/Search';
+import TableComponent from '../components/Table';
+import AddIcon from '@mui/icons-material/Add';
 
 const generateRandomData = () => {
     const desserts = ['Frozen yoghurt', 'Ice cream sandwich', 'Eclair', 'Cupcake', 'Gingerbread'];
@@ -41,37 +34,28 @@ const headers = [
 
 const initialRows = generateRandomData();
 
-
-
-function Celulares() {
-    const [showModal, setShowModal] = useState(false);
-
-    const onAddHandler = () => {
-        setShowModal(true);
-    }
-
-
-
+export const Llaves = () => {
     return (
         <div className='flex flex-col h-screen p-7' >
             <div className="flex  pb-4 pt-3 justify-end ">
-                <Search holder={"Celular"} />
+                <Search holder={"Llave"} />
             </div>
             <div className="bg-red-300 h-2/3 ">
                 <TableComponent headers={headers} rows={initialRows} />
             </div>
             <div className="text-right pt-1">
-                <span>100 reg</span>
+                <span>{initialRows.length}</span>
             </div>
-            <BotonesBottom label={'Agregar Celular'} addHandle={onAddHandler} />
-            {showModal ?
-                <Modal
-                    // title={"Agregar Celular"}
-                    setShowModal={setShowModal}
-                    body={<CelularForm />}
-                /> : null}
+            <div className="h-1/6 flex flex-row justify-between content-center pt-4" >
+                <div className="buttons2 w-full ">
+                    <button className='btn-agregar w-[300px] h-10 text-white rounded-md  transition-colors duration-300 float-end'
+                        >
+                        <AddIcon />
+                        Agregar Llave
+                    </button>
+                </div>
+            </div>
+
         </div>
     )
 }
-
-export default Celulares;
