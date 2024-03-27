@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Search } from '../components/Search';
 import TableComponent from '../components/Table';
 import { BotonesBottom } from '../components/BotonesBottom';
+import { MicroImpresoraForm } from '../forms/MicroImpresoraForm';
+import Modal from '../components/Modal';
 
 
 const generateRandomData = () => {
@@ -37,6 +39,12 @@ const initialRows = generateRandomData();
 
 
 export const MicroImpresoras = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const onOpenhandled = () => {
+        setShowModal(true);
+    }
+
     return (
         <div className='flex flex-col h-screen p-7' >
             <div className="flex  pb-4 pt-3 justify-end ">
@@ -49,7 +57,10 @@ export const MicroImpresoras = () => {
                 <span>{initialRows.length}</span>
             </div>
 
-            <BotonesBottom label={'Agregar Micro Impresora'} />
+            <BotonesBottom label={'Agregar Micro Impresora'} addHandle={onOpenhandled} />
+            {
+                showModal ? <Modal setShowModal={setShowModal} body={<MicroImpresoraForm />} /> : null
+            }
         </div>
     )
 }

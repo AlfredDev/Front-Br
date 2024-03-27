@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Search } from '../components/Search';
 import TableComponent from '../components/Table';
 import { BotonesBottom } from '../components/BotonesBottom';
+import Modal from '../components/Modal';
+import { PantallaForm } from '../forms/PantallaForm';
 
 const generateRandomData = () => {
     const desserts = ['Frozen yoghurt', 'Ice cream sandwich', 'Eclair', 'Cupcake', 'Gingerbread'];
@@ -37,6 +39,13 @@ const initialRows = generateRandomData();
 
 
 export const Pantallas = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
+    const onOpenhandled = () => {
+        setShowModal(true);
+    }
+
     return (
 
         <div className='flex flex-col h-screen p-7' >
@@ -50,7 +59,12 @@ export const Pantallas = () => {
                 <span>{initialRows.length}</span>
             </div>
 
-            <BotonesBottom label={'Agregar Pantalla'} />
+            <BotonesBottom label={'Agregar Pantalla'} addHandle={onOpenhandled} />
+
+            {
+                showModal ? <Modal setShowModal={setShowModal} body={<PantallaForm />} />
+                    : null
+            }
         </div>
     )
 }

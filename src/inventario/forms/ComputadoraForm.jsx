@@ -81,7 +81,7 @@ export const ComputadoraForm = () => {
                         </div>
 
                     </div>
-                    <div className='w-1/4'>
+                    <div className='w-1/4 pl-10'>
                         <div className=''>
                             <label htmlFor="pserie" className="block">Empleado Responsable</label>
                             <input
