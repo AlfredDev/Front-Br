@@ -9,9 +9,7 @@ export const PantallaForm = () => {
             <form action="" className='w-full pt-5 pl-2'>
                 <div className="flex">
                     <div className='w-3/5 pl-5'>
-
                         <CommonInputs />
-
                     </div>
                     <div className='w-2/5 pl-2'>
 
