@@ -1,4 +1,3 @@
-import React from 'react'
 import { CommonInputs } from './components/CommonInputs'
 import { DescripcionBox } from './components/DescripcionBox'
 import { BotonesSave } from './components/BotonesSave'

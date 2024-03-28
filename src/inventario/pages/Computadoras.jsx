@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Search } from '../components/Search'
 import TableComponent from '../components/Table';
-import { useNavigate } from 'react-router-dom';
 import { ModalXl } from '../components/ModalXl';
 import { ComputadoraForm } from '../forms/ComputadoraForm';
 import { BotonesBottom } from '../components/BotonesBottom';
@@ -36,16 +35,12 @@ const headers = [
 ];
 
 
-const onAddHandler = () => {
-
-}
 
 
 const initialRows = generateRandomData();
 
 export const Computadoras = () => {
 
-    let navigate = useNavigate();
 
 
 
@@ -68,7 +63,7 @@ export const Computadoras = () => {
                 <span>100 reg</span>
             </div>
 
-            <BotonesBottom label={'Agregar Computadora'}  addHandle = {onAddHandler}/>
+            <BotonesBottom label={'Agregar Computadora'} addHandle={onAddHandler} />
 
             {showModal ? <ModalXl setShowmodal={setShowModal} body={<ComputadoraForm />} title={"Agregar Computadora"} /> : null}
         </div>

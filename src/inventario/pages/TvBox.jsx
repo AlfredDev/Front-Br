@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Search } from '../components/Search';
 import TableComponent from '../components/Table';
 import { BotonesBottom } from '../components/BotonesBottom';
@@ -59,7 +59,7 @@ export const TvBox = () => {
             <BotonesBottom label={'Agregar Telefono'} addHandle={onOpenhandled} />
             {
                 showModal
-                    ? <Modal setShowModal={setShowModal} body={<TvBoxForm/>}/>
+                    ? <Modal setShowModal={setShowModal} body={<TvBoxForm />} />
                     : null
             }
         </div>

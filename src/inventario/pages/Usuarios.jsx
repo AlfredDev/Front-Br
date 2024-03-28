@@ -1,5 +1,3 @@
-import Button from "../components/ButtonAdd";
-import styled from "styled-components";
 import Modal from "../components/Modal";
 import React from "react";
 import { Search } from "../components/Search";
@@ -25,7 +23,7 @@ function Usuarios(){
     return (
         <div className='flex flex-col h-screen p-7' >
             <div className="flex  pb-4 pt-3 justify-end ">
-                <Search holder={"PC"} />
+                <Search holder={"Usuario"} />
             </div>
             <div className="bg-red-300 h-2/3 ">
                 <TableComponent headers={headers} rows={initialRows} />

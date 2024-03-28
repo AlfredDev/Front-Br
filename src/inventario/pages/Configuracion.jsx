@@ -49,11 +49,11 @@ function Configuracion() {
         },
     ];
     return (
-        <Container className="h-full">
-            <div className="opciones">
+        <Container className="h-full ">
+            <div className="opciones shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
                 {opciones.map(({ icon, label, to }) => (
                     <div className="item w-full" key={label}>
-                        <NavLink className="link w-full" to={to}>
+                        <NavLink className="link w-full rounded-sm" to={to}>
                             <div className="linkicon p-2">{icon}</div>
                             <span className="w-full">{label}</span>
                             <FaChevronRight className="icon-right"/>
