@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { Search } from '../components/Search';
 import TableComponent from '../components/Table';
 import { BotonesBottom } from '../components/BotonesBottom';

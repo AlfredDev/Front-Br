@@ -2,9 +2,17 @@ import { Search } from "../components/Search"
 
 import EventIcon from '@mui/icons-material/Event';
 import TableHeading from "../components/TableHeading";
+import { useState } from "react";
+import Modal from "../components/Modal";
+import { AgendaForm } from '../forms/AgendaForm';
+
 export const Home = () => {
 
+  const [showModal, setShowModal] = useState(false);
 
+  const onoOpenhandled = () => {
+    setShowModal(true);
+  }
 
   return (
     <div className='flex flex-col h-screen p-7 overflow-scroll' >
@@ -13,6 +21,7 @@ export const Home = () => {
       </div>
       <div className="flex  pb-3 pt-3 justify-end ">
         <button className='btn-agregar w-[250px] h-10 text-white rounded-md  transition-colors duration-300 float-end'
+          onClick={onoOpenhandled}
         >
           <EventIcon />
 
@@ -46,6 +55,9 @@ export const Home = () => {
           onEdit={(index) => console.log('Editar en índice:', index)}
         />
       </div>
+      {
+        showModal ? <Modal setShowModal={setShowModal} body={<AgendaForm/>}/> : null
+      }
     </div>
   )
 }

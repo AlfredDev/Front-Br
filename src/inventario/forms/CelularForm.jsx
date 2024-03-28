@@ -1,4 +1,3 @@
-import React from 'react'
 import { CommonInputs } from './components/CommonInputs'
 import { OsSelect } from './components/OsSelect'
 import { DescripcionBox } from './components/DescripcionBox'
